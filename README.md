@@ -2,21 +2,18 @@
 
 `CURSO` Tecnologia em Sistemas para Internet
 
-`DISCIPLINA` Projeto: Aplicações Web
+`DISCIPLINA` Projeto: Desenvolvimento de Aplicações Distribuídas
 
-`SEMESTRE` 02-2021
+`SEMESTRE` 2023/1
 
 ## Integrantes
 
-* Ana Luiza Lisboa do Nascimento
 * Danilo Santos Silva
-* Eduardo Lemos dos Santos
-* Mariane Pantana Alabarce
-* Alessandra dos Santos Silva
+
 
 ## Orientador
 
-* Fabiano Costa Teixeira
+* Luiz Gomes
 
 ## Instruções de utilização
 
@@ -42,7 +39,7 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 
 # Código
 
-* <a href="https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2021-2-e1-proj-web-t1-grupo-4/archive/refs/heads/main.zip"> Código Fonte</a>
+* <a href="https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e4-proj-back-t1-time-3-siscamovel/archive/refs/heads/main.zip"> Código Fonte</a>
 
 # Apresentação
 
