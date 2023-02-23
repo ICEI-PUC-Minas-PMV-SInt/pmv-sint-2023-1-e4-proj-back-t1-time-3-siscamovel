@@ -95,9 +95,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-005| O sistema deve ficar no ar 24h |  MÉDIA | 
 |RNF-006| O sistema não apresentará aos usuários quaisquer dados de cunho privativo |  MÉDIA | 
 |RNF-007| O sistema deve ter certificação de segurança |  MÉDIA | 
-|RNF-008| O sistema deve usar PostgreSQL para salvar dados de cadastro |  MÉDIA | 
-|RNF-009| O sistema deve ter ferramenta de análise de dados com o Plausable Analytics |  BAIXA | 
-|RNF-010| O sistema deve respeitar as boas práticas de acessibilidade | MÉDIA
+|RNF-008| O sistema deve usar PostgreSQL para salvar dados |  MÉDIA | 
+|RNF-009| O sistema deve usar Azure Cosmos DB para armazenamento de arquivos |  MÉDIA | 
+|RNF-010| O sistema deve ter ferramenta de análise de dados com o Plausable Analytics |  BAIXA | 
+|RNF-011| O sistema deve respeitar as boas práticas de acessibilidade | MÉDIA
 
 
 ## Restrições
@@ -107,4 +108,6 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
 |01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+|02| O perfil de administrador deverá ter acesso restrito ao usuário |
+|03| Ter microsserviço de login passwordless (admin e usuário) |
+|04| Ter microsserviço de armazenamento de dados (cadastro e informações do veículo, favoritos do usuário) |
