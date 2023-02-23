@@ -29,13 +29,10 @@ etiquetas:
 ### Divisão de Papéis
 
 **Product Owner**
-- Fabiano Costa Teixeira
+- Danilo Santos Silva
 
 **UX/UI / Developer**
-- Mariane Pantana Alabarce
-- Eduardo Lemos dos Santos 
-- Ana Luiza Lisboa do Nascimento
-- Alessandra dos Santos Silva
+- Danilo Santos Silva
 
 **Scrum Master / Developer**
 - Danilo Santos Silva
@@ -50,9 +47,9 @@ A partir do que for solicitado no Product Backlog, é criada a Sprint Backlog, q
 
 As ferramentas empregadas no projeto são:
 
-- Editor de código: VS Code
-- Ferramentas de comunicação: Whatsapp, Teams e Trello
+- Editor de código: VS Code, Rider
+- Ferramentas de comunicação: Whatsapp, Teams e Notion
 - Ferramentas de desenho de tela (_wireframing_): Figma, Photoshop
 
-O editor de código foi escolhido porque ele possui facilidade de integração com tecnologias como HTML5, CSS E javascript.  
-As ferramentas de comunicação foram escolhidas pela facilidade de acesso de todos
+O editor de código VS Code foi escolhido porque ele possui facilidade de integração com tecnologias como HTML5, CSS, javascript e Angular, enquanto a IDE Rider pela facilitação do desenvolvimento de APIs com C# e .NET.
+As ferramentas de comunicação foram escolhidas pela facilidade de acesso.
