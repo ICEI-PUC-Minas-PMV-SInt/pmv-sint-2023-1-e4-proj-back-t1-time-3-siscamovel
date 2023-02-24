@@ -71,17 +71,18 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| O sistema deve permitir cadastrar, alterar e excluir informações sobre veículos elétricos   | MÉDIA |
-|RF-002| O sistema deve permitir cadastrar, alterar e excluir imagens e vídeos dos veículos   | MÉDIA |
-|RF-003| O sistema deve permitir comparar todos os recursos e funções dos veículos   | MÉDIA |
-|RF-004| O sistema deve permitir buscar os veículos por palavra-chave   | MÉDIA |
-|RF-005| O sistema deve permitir o cadastro e a exclusão de usuários | ALTA | 
-|RF-006| O sistema deve permitir a recuperação de login | ALTA |
-|RF-007| O sistema deve permitir que o usuário escolha e favorite o carro desejado  | MÉDIA |
-|RF-008| O sistema deve permitir que o usuário busque por veículos utilizando filtros | MÉDIA |
+|ID    | Descrição do Requisito | Dificuldade (B/M/A)* | Prioridade (B/M/A)* |
+|------|-----------------------------------------|----|----|
+|RF-001| O sistema deve permitir cadastrar, alterar e excluir informações sobre veículos elétricos   | MÉDIA | MÉDIA |
+|RF-002| O sistema deve permitir cadastrar, alterar e excluir imagens e vídeos dos veículos   | MÉDIA | MÉDIA |
+|RF-003| O sistema deve permitir comparar todos os recursos e funções dos veículos   | ALTA | ALTA |
+|RF-004| O sistema deve permitir buscar os veículos por palavra-chave   | MÉDIA | MÉDIA |
+|RF-005| O sistema deve permitir o cadastro e a exclusão de usuários | ALTA | ALTA |
+|RF-006| O sistema deve permitir a recuperação de login para administradores do sistema | ALTA | ALTA |
+|RF-007| O sistema deve permitir que o usuário escolha e favorite o carro desejado  | MÉDIA | MÉDIA |
+|RF-008| O sistema deve permitir que o usuário busque por veículos utilizando filtros | MÉDIA | MÉDIA |
 
+*B=Baixa, M=Média, A=Alta.
 
 
 ### Requisitos não Funcionais
@@ -90,11 +91,11 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |-------|-------------------------|----|
 |RNF-001| O sistema deve ser responsivo para rodar em dispositivos móveis | MÉDIA | 
 |RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-|RNF-003| O sistema deve rodar em diversos tipos de navegadores |  MÉDIA | 
+|RNF-003| O sistema deve rodar em diversos tipos de navegadores |  ALTA | 
 |RNF-004| O sistema deve ser intuitivo e de fácil compreensão ao usuário |  MÉDIA | 
 |RNF-005| O sistema deve ficar no ar 24h |  MÉDIA | 
-|RNF-006| O sistema não apresentará aos usuários quaisquer dados de cunho privativo |  MÉDIA | 
-|RNF-007| O sistema deve ter certificação de segurança |  MÉDIA | 
+|RNF-006| O sistema não apresentará aos usuários quaisquer dados de cunho privativo |  ALTA | 
+|RNF-007| O sistema deve ter certificação de segurança | ALTA | 
 |RNF-008| O sistema deve usar PostgreSQL para salvar dados |  MÉDIA | 
 |RNF-009| O sistema deve usar Azure Cosmos DB para armazenamento de arquivos |  MÉDIA | 
 |RNF-010| O sistema deve ter ferramenta de análise de dados com o Plausable Analytics |  BAIXA | 
