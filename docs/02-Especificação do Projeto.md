@@ -96,7 +96,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-005| O sistema deve ficar no ar 24h |  MÉDIA | 
 |RNF-006| O sistema não apresentará aos usuários quaisquer dados de cunho privativo |  ALTA | 
 |RNF-007| O sistema deve ter certificação de segurança | ALTA | 
-|RNF-008| O sistema deve usar PostgreSQL para salvar dados |  MÉDIA | 
+|RNF-008| O sistema deve usar MariaDB para salvar dados |  MÉDIA | 
 |RNF-009| O sistema deve usar Azure Cosmos DB para armazenamento de arquivos |  MÉDIA | 
 |RNF-010| O sistema deve ter ferramenta de análise de dados com o Plausable Analytics |  BAIXA | 
 |RNF-011| O sistema deve respeitar as boas práticas de acessibilidade | MÉDIA
