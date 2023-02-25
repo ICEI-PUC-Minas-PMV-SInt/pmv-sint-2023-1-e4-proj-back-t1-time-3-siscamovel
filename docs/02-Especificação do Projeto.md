@@ -124,6 +124,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |Análise     | Design  |Implementação |
 |-------|-------------------------|----|
 |Persistência | Banco de dados relacional | MariaDB |
+|Persistência | Document store | Azure Cosmos DB |
 |Front end | Framework de desenvolvimento | Angular |
 |Front end | Linguagem de programação | Typescript |
 |Front end | Framework de folha de estilos | TailwindCSS |
