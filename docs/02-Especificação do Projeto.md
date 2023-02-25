@@ -102,13 +102,45 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-011| O sistema deve respeitar as boas práticas de acessibilidade | MÉDIA
 
 
-## Restrições
+## Restrições Arquiteturais
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-|ID| Restrição                                             |
+|RNUM| Descrição                                          |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| O perfil de administrador deverá ter acesso restrito ao usuário |
-|03| Ter microsserviço de login passwordless (admin e usuário) |
-|04| Ter microsserviço de armazenamento de dados (cadastro e informações do veículo, favoritos do usuário) |
+|**R1**| O front end deve ser desenvolvido com a linguagem Typescript e para isso deve ser utilizado o framework Angular na versão mais recente. |
+|**R2**| Para a construção e padronização de interface do usuário, deve ser utilizado o framework Tailwind CSS como um facilitador do guia de estilo, uso de media queries e sistema de grid para responsividade em diversos aparelhos. |
+|**R3**| Como forma de transporte de informações deve ser utilizado o formato JSON. |
+|**R4**| O sistema deverá ter dois microsserviços: um para gerenciamento de login passwordless (admin e usuário) e outro para armazenamento de dados (cadastro e informações do veículo, favoritos do usuário). |
+|**R5**| O mecanismo de autorização entre as APIs deverá ser feito por meio do JWT. |
+|**R6**| O sistema deve ser construído de forma modular para facilitar a implantação. |
+|**R7**| Os módulos do sistema que compõem os microsserviços do backend devem ser construídos na linguagem C# com o framework .NET Core em sua última versão para execução do lado do servidor. |
+|**R8**| A plataforma de comunicação em nuvem Azure deverá ser utilizada para o gerenciamento do serviços. |
+|**R9**| Deverá ser utilizado o MariaDB para armazenamento de dados. |
+|**R10**| Deverá ser utilizado o Apache Kafka para tratamento de dados em tempo real. |
+
+
+## Mecanismos Arquiteturais
+|Análise     | Design  |Implementação |
+|-------|-------------------------|----|
+|Persistência | Banco de dados relacional | MariaDB |
+|Front end | Framework de desenvolvimento | Angular |
+|Front end | Linguagem de programação | Typescript |
+|Front end | Framework de folha de estilos | TailwindCSS |
+|Deploy | Plataforma de automatização de deploy | Azure |
+|Back end | Linguagem de programação | C# |
+|Back end | Framework Server-Side Web | ASP.NET Core |
+|Back end | Ambiente de execução | .NET |
+|Back end | Tratamento de dados em tempo real | Apache Kafka |
+|Back end | Serviço de execução de código | Azure App Service |
+|Back end | Gerenciador de trafego | Azure App Service |
+|Autenticação | Padrão de formato para autenticação | JWT |
+|Autenticação | Serviço de autenticação | Azure Active Directory |
+|Integração | Formato de transporte de informações | JSON |
+|Integração | Protocolo de comunicação | HTTP |
+|Integração | Estilo de arquitetura | REST |
+|Versionamento | Controle e armazenamento de código fonte | Gitlab |
+|Versionamento | Versionamento de código fonte | Git |
+|Automação | Ferramenta de workflow | Gitlab Flow |
+|Build | Ferramenta de build de componentes do software | NPM, NuGet |
+|Folha de estilos | Linguagem de folha de estilos | CSS |
