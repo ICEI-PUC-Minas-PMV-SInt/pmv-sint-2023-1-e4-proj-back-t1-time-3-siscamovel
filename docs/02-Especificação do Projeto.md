@@ -145,3 +145,37 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |Automação | Ferramenta de workflow | Gitlab Flow |
 |Build | Ferramenta de build de componentes do software | NPM, NuGet |
 |Folha de estilos | Linguagem de folha de estilos | CSS |
+
+
+## Modelagem e Projeto Arquitetural
+### APIs projetadas
+
+01 - Gerenciamento de dados de veículos elétricos (CRUD)
+| HTTP Verb | Endpoint | Ação |
+|---------|---------|------|
+| GET | /veiculo | Obtenha todos os veículos cadastrados |
+| POST | /veiculo/novo | Cadastre um novo veículo |
+| GET | /veiculo/{id} | Obtenha um veículo específico |
+| GET | /veiculo/favoritos | Obtenha os favoritos do usuário cadastrado |
+| PUT | /veiculo/{id} | Atualize um veículo específico (somente Admin) |
+| DELETE | /veiculo/{id} | Exclui um veículo específico (somente Admin) |
+
+
+02 - Sistema de autenticação (user)
+| HTTP Verb | Endpoint | Ação |
+|---------|---------|------|
+| GET | /oauth | Obtenha acesso via sistema OAuth |
+| POST | /oauth | Crie novo acesso via sistema OAuth |
+| GET | /oauth/{tokenId} | Obtenha acesso via sistema OAuth com token distribuído pela API do sistema |
+| PUT | /oauth/{tokenId} | Atualize dados de autorização via API de sistema |
+| DELETE | /oauth/{tokenId} | Exclui autorização de acesso ao sistema |
+
+
+03 - Sistema de autenticação (admin)
+| HTTP Verb | Endpoint | Ação |
+|---------|---------|------|
+| GET | /auth | Obtenha acesso para administradores |
+| POST | /auth | Crie novo acesso via sistema passwordless |
+| GET | /auth/{id} | Obtenha um administrador específico |
+| PUT | /auth/{id} | Atualize um administrador específico |
+| DELETE | /auth/{id} | Exclui acesso do administrador |
