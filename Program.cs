@@ -1,6 +1,12 @@
+using siscm_data_management.Database;
+using siscm_data_management.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.Configure<DatabaseSettings>
+    (builder.Configuration.GetSection("SISCMDatabase"));
+builder.Services.AddSingleton<VeiculoServices>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
