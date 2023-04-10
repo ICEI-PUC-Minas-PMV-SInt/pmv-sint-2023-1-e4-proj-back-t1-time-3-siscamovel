@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ListarVeiculos } from 'src/app/models/admin/listar-veiculos/listar-veiculos.model';
+import { ListarVeiculosService } from 'src/app/services/admin/listar-veiculos.service';
 
 @Component({
   selector: 'app-listar-veiculos',
@@ -8,18 +9,19 @@ import { ListarVeiculos } from 'src/app/models/admin/listar-veiculos/listar-veic
 })
 export class ListarVeiculosComponent implements OnInit {
   
-  veiculos: ListarVeiculos[] = [
-    {
-      id: '1',
-      fabricante: 'BYD',
-      modelo: 'TAN EV',
-      ano: 2022
-    }
-  ]
+  veiculos: ListarVeiculos[] = [];
 
-  constructor() {}
+  constructor(private listarVeiculosService: ListarVeiculosService) {}
 
   ngOnInit(): void {
-    this.veiculos.push()
+    this.listarVeiculosService.getObterTodosOsVeiculos()
+    .subscribe({
+      next: (veiculos) => {
+        console.log(veiculos);
+      },
+      error: (response) => {
+        console.log(response);
+      },
+    })
   }
 }
