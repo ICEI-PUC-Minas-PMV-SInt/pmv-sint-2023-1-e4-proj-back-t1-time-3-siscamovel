@@ -28,6 +28,31 @@ namespace siscm_data_management.Controllers
             await _veiculoServices.CreateAsync(veiculosRequest);
             return veiculosRequest;
         }
-        
+
+        [HttpPut]
+        public async Task<IActionResult> Put(Veiculos veiculosUpdate)
+        {
+            var au = _veiculoServices.UpdateAsync(veiculosUpdate.Id, veiculosUpdate);
+            if (au == null)
+            {
+                return NotFound();
+            }
+
+            await _veiculoServices.UpdateAsync(veiculosUpdate.Id, veiculosUpdate);
+            return NoContent();
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> Delete(string id)
+        {
+            var ad = _veiculoServices.RemoveAsync(id);
+            if (ad == null)
+            {
+                return NotFound();
+            }
+
+            await _veiculoServices.RemoveAsync(id);
+            return NoContent();
+        }
     }
 }
