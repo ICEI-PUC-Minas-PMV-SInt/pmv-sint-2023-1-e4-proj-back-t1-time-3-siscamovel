@@ -21,6 +21,18 @@ namespace siscm_data_management.Controllers
             var veiculos = await _veiculoServices.GetAsync();
             return Ok(veiculos);
         }
+        
+        [HttpGet]
+        [Route("{id}")]
+        public async Task<IActionResult> ObterTodosOsVeiculosPorId(string id)
+        {
+            var veiculos = await _veiculoServices.GetByIdAsync(id);
+            if (veiculos == null)
+            {
+                return NotFound();
+            }
+            return Ok(veiculos);
+        }        
 
         [HttpPost]
         public async Task<Veiculos> AdicionarVeiculos([FromBody] Veiculos veiculosRequest)

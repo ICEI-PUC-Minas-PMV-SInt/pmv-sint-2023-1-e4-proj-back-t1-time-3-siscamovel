@@ -20,7 +20,7 @@ public class VeiculoServices
     public async Task<List<Veiculos>> GetAsync() =>
         await _veiculosCollection.Find(eletricos => true).ToListAsync();
 
-    public async Task<Veiculos> GetAsync(string id) =>
+    public async Task<Veiculos> GetByIdAsync(string id) =>
         await _veiculosCollection.Find(eletricos => eletricos.Id == id).FirstOrDefaultAsync();
 
     public async Task CreateAsync(Veiculos veiculos) => 
