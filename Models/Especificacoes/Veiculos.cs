@@ -5,7 +5,6 @@ namespace siscm_data_management.Models.Especificacoes;
 
 public class Veiculos
 {
-    [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
     public string? Id { get; set; }
 
