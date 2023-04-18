@@ -17,7 +17,7 @@ export class ListarVeiculosComponent implements OnInit {
     this.listarVeiculosService.getObterTodosOsVeiculos()
     .subscribe({
       next: (veiculos) => {
-        console.log(veiculos);
+        this.veiculos = veiculos;
       },
       error: (response) => {
         console.log(response);
