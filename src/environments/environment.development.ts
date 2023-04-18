@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    baseApiSiscm: 'https://localhost:5071'
+    baseApiSiscm: 'http://localhost:5071'
 };
