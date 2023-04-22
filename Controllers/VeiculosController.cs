@@ -24,7 +24,7 @@ namespace siscm_data_management.Controllers
         
         [HttpGet]
         [Route("{id}")]
-        public async Task<IActionResult> ObterTodosOsVeiculosPorId(string id)
+        public async Task<IActionResult> ObterTodosOsVeiculosPorId([FromRoute] string id)
         {
             var veiculos = await _veiculoServices.GetByIdAsync(id);
             if (veiculos == null)
@@ -42,16 +42,16 @@ namespace siscm_data_management.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Put(Veiculos veiculosUpdate)
+        public async Task<IActionResult> Put([FromRoute] Veiculos veiculosUpdate)
         {
             var au = _veiculoServices.UpdateAsync(veiculosUpdate.Id, veiculosUpdate);
             if (au == null)
             {
                 return NotFound();
             }
-
+            
             await _veiculoServices.UpdateAsync(veiculosUpdate.Id, veiculosUpdate);
-            return NoContent();
+            return Ok(au);
         }
 
         [HttpDelete]
@@ -64,7 +64,7 @@ namespace siscm_data_management.Controllers
             }
 
             await _veiculoServices.RemoveAsync(id);
-            return NoContent();
+            return Ok(ad);
         }
     }
 }
