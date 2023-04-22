@@ -5,6 +5,7 @@
             <th>Fabricante</th>
             <th>Modelo</th>
             <th>Ano</th>
+            <th>Opções</th>
           </tr>
         </thead>
         <tbody>
@@ -12,6 +13,7 @@
             <td>{{ veiculo.fabricante }}</td>
             <td>{{ veiculo.modelo }}</td>
             <td>{{ veiculo.ano }}</td>
+            <td><a [routerLink]="['/admin', 'veiculos', 'editar', veiculo.id]">Editar</a></td>
           </tr>
         </tbody>
       </table>

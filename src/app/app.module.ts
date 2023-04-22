@@ -8,13 +8,15 @@ import { AdminHomeComponent } from './components/admin/admin-home/admin-home.com
 import { ListarVeiculosComponent } from './components/admin/veiculos/listar-veiculos/listar-veiculos.component';
 import { CadastrarVeiculosComponent } from './components/admin/veiculos/cadastrar-veiculos/cadastrar-veiculos.component';
 import { FormsModule } from '@angular/forms';
+import { EditarVeiculosComponent } from './components/admin/veiculos/editar-veiculos/editar-veiculos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminHomeComponent,
     ListarVeiculosComponent,
-    CadastrarVeiculosComponent
+    CadastrarVeiculosComponent,
+    EditarVeiculosComponent
   ],
   imports: [
     BrowserModule,
