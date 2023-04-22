@@ -44,5 +44,14 @@ export class EditarVeiculosComponent implements OnInit {
         this.router.navigate(['admin/veiculos/listar']);
       }
     })
-  }  
+  }
+
+  excluirVeiculo(id: string) {
+    this.veiculosService.excluirVeiculoPlat(id)
+    .subscribe({
+      next: (response) => {
+        this.router.navigate(['admin/veiculos/listar']);
+      }
+    })
+  }
 }

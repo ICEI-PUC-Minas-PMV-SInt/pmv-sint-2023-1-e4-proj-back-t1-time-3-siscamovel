@@ -30,4 +30,8 @@ export class VeiculosService {
     return this.http.put<Veiculo>(this.baseApiSiscm + '/siscm/Veiculos/' + id, atualizarInfoVeiculoRequest);
   }
 
+  excluirVeiculoPlat(id: string): Observable<Veiculo> {
+    return this.http.delete<Veiculo>(this.baseApiSiscm + '/siscm/Veiculos/' + id);
+  }
+
 }
