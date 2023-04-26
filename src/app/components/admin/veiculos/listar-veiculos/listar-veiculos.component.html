@@ -1,0 +1,21 @@
+<div class="container mx-auto">
+    <table class="table-auto" *ngIf="veiculos && veiculos.length > 0">
+        <thead>
+          <tr>
+            <th>Fabricante</th>
+            <th>Modelo</th>
+            <th>Ano</th>
+            <th>Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let veiculo of veiculos">
+            <td>{{ veiculo.fabricante }}</td>
+            <td>{{ veiculo.modelo }}</td>
+            <td>{{ veiculo.ano }}</td>
+            <td><a [routerLink]="['/admin', 'veiculos', 'editar', veiculo.id]">Editar</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="!veiculos || veiculos.length <= 0"> Oops! Plataforma sem veiculos cadastrados</p>
+</div>
