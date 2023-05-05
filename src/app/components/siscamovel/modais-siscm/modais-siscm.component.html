@@ -1,0 +1,138 @@
+    <!-- Trigger de modais -->
+    <!-- Log In -->
+    <div class="modal fade" id="logIn" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fasterone" id="staticBackdropLabel">siscamovel</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post">
+                        <div class="form-group mb-3">
+                            <label for="emailPessoa" class="form-label">e-mail</label>
+                            <input type="text" class="form-control" placeholder="karl@marx.de" id="emailPessoa" value="mariane@diamandis.uk" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="senhaPessoa" class="form-label">senha</label>
+                            <input type="password" class="form-control" placeholder="digite sua senha" id="senhaPessoa" value="Mar1naSav@g\-_s" required>
+                            <i class="bi bi-eye" id="text"></i>
+                            <i class="bi bi-eye-slash" id="pass"></i>
+                        </div>
+                        <div class="form-group mb-3">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#recuperarSenha">esqueceu a senha?</a>
+                        </div>
+                        <div class="form-group mb-3">
+                            <button type="button" class="btn btn-outline-primary btn-block col-12 mx-auto" onclick="contaPessoa()">log in</button>
+                        </div>
+                        <div class="or-seperator"><strong>ou</strong></div>
+                        <div class="form-group d-grid gap-2">
+                            <a href="https://accounts.google.com" class="btn btn-outline-danger" target="_blank"><i class="bi bi-google"></i> faça log in com o google</a>
+                        </div>
+                        <div class="text-center mt-4">
+                            <span>nova(o) por aqui?</span> <a href="#" data-bs-toggle="modal" data-bs-target="#criarConta">crie uma conta!</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- recuperar senha -->
+    <div class="modal fade" id="recuperarSenha" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">recuperar senha</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="" method="post">
+                    <div class="mb-3">
+                        <label for="recuperarConta" class="form-label">para prosseguir, digite seu e-mail:</label>
+                        <input type="email" class="form-control" id="recuperarConta" placeholder="karl@marx.de">
+                      </div>
+                      <div class="d-grid gap-2">
+                        <button type="button" class="btn btn-outline-primary mb-3" data-bs-toggle="modal" data-bs-target="#confirmarRecuperacaoSenha" onclick="mockRecuperarConta()">recuperar senha</button>
+                      </div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- criar conta -->
+    <div class="modal fade" id="criarConta" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">cadastro</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id='listaPessoas' class="modal-body">
+                <form id='cadastroPessoas'>
+                    <div class="mb-3 row">
+                        <label for="nomePessoa" class="col-sm-2 col-form-label">nome</label>
+                        <div class="col-sm-10">
+                            <input type="hidden" class="form-control" id="peopleID" readonly>
+                            <input type="text" class="form-control" id="nomePessoa" placeholder="Karl Marx" required>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="emailPessoa" class="col-sm-2 col-form-label">e-mail</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="emailPessoa" placeholder="karl@marx.de" required>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="senhaPessoa" class="col-sm-2 col-form-label">senha</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="senhaPessoa" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">desistir</button>
+                        <button type="submit" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#confirmarCadastro">cadastrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- modal: confirmação de cadastro-->
+    <div class="modal fade" id="confirmarCadastro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">cadastro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center fw-bold">yay \o/</p>
+                    <p class="text-center fw-bold">cadastro efetuado com sucesso!!! <i class="bi bi-emoji-smile"></i></p>
+                    <div class="d-grid gap-2">
+                        <a href="" type="submit" class="btn btn-outline-danger mb-3">ver dados da conta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal: confirmação de recuperação de senha -->
+    <div class="modal fade" id="confirmarRecuperacaoSenha" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">recuperar senha</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>um e-mail de recuperação de senha foi enviado para <strong id="valorMockRecuperarConta">  </strong> <i class="bi bi-emoji-smile"></i></p>
+                    <div class="d-grid gap-2">
+                        <button type="button" class="btn btn-outline-danger mb-3" data-bs-dismiss="modal">uhulll, obrigado!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
