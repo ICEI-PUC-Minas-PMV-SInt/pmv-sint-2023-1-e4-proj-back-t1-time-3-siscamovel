@@ -1,0 +1,116 @@
+<app-header></app-header>
+
+<section class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="mb-3 row">
+                <h1>listagem de veículos elétricos</h1>
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col-sm-10">
+                    <button class="btn btn-outline-danger" type="button" data-bs-toggle="modal" data-bs-target="#gerenciarVeiculos">cadastrar novo veículo</button>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="mb-3 row">
+              <div class="col-sm-12">
+                <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Pesquisar" autofocus id="inputPesquisa">
+              </div>
+            </div>
+
+            <div class="mb-3 row table-responsive">
+                <table class="table table-bordeless table-sm table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">Imagem</th>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Fabricação</th>
+                        <th scope="col">Preço</th>
+                        <th scope="col">Potência / torque</th>
+                        <th scope="col">Autonomia máxima</th>
+                        <th scope="col">Velocidade máxima</th>
+                        <th scope="col">Bateria</th>
+                        <th scope="col">Carregamento</th>
+                        <th scope="col">Recarga rápida</th>
+                        <th scope="col">Recarga completa</th>
+                        <th scope="col">Ações</th>
+                      </tr>
+                    </thead>
+                    <tbody id="listaRegistrosBody"></tbody>
+                  </table>       
+            </div>
+        </div>
+    </div>
+</section>
+
+<br>
+
+<app-footer></app-footer>
+
+
+<!-- Modal: Cadastrar veículo -->
+<div class="modal fade" id="gerenciarVeiculos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="gerenciarVeiculosLabel">Cadastro de veículos</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id='listaRegistros' class="modal-body">
+            <form id='cadastroRegistro' class="row g-3 needs-validation">
+              <div class="col-md-12">
+                <label for="imagemveiculo" class="form-label">Imagem do veículo</label>
+                <input type="text" class="form-control" id="imagemveiculo" required>
+              </div>
+                <div class="col-md-6">
+                  <label for="modelo" class="form-label">Modelo</label>
+                  <input type="text" class="form-control" id="modelo" placeholder="renault marx" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="anoFabricacao" class="form-label">Ano de fabricação</label>
+                  <input type="text" class="form-control" id="anoFabricacao" placeholder="2022" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="preco" class="form-label">Preço</label>
+                    <input type="text" class="form-control" id="preco" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="potenciaTorque" class="form-label">Potência / torque</label>
+                    <input type="text" class="form-control" id="potenciaTorque" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="autonomiaMaxima" class="form-label">Autonomia máxima</label>
+                  <input type="text" class="form-control" id="autonomiaMaxima" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="velocidadeMaxima" class="form-label">Velocidade máxima</label>
+                  <input type="text" class="form-control" id="velocidadeMaxima" required>
+                </div>
+                <div class="col-12">
+                    <label for="bateria" class="form-label">Bateria</label>
+                    <input type="text" class="form-control" id="bateria" required>
+                  </div>
+                  <div class="col-12">
+                    <label for="carregamento" class="form-label">Forma de carregamento</label>
+                    <input type="text" class="form-control" id="carregamento" required>
+                  </div>
+                  <div class="col-12">
+                    <label for="recargaRapidaVeiculo" class="form-label">Recarga rápida</label>
+                    <input type="text" class="form-control" id="recargaRapidaVeiculo" required>
+                  </div>
+                  <div class="col-12">
+                    <label for="recargaCompletaVeiculo" class="form-label">Recarga completa</label>
+                    <input type="text" class="form-control" id="recargaCompletaVeiculo" required>
+                  </div>
+                <div class="col-12 modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                  <button type="submit" class="btn btn-primary">Salvar dados</button>
+                </div>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
