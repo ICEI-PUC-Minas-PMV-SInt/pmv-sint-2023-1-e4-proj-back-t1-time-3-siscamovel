@@ -27,8 +27,6 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/bootstrap-icons/font/bootstrap-icons.css",
-              "node_modules/@fontsource/faster-one/index.css",
-              "node_modules/@fontsource/sen/index.css",
               "src/styles.css"
             ],
             "scripts": [
