@@ -44,4 +44,35 @@ public class VeiculosController : Controller
         
         return Ok(veiculosRequest);
     }
+
+    [HttpPut]
+    [Route("{id:Guid}")]
+    public async Task<IActionResult> AlterarDadosVeiculo([FromRoute] Guid id, Veiculos atualizarVeiculo)
+    {
+        var veiculo = await _gerenciar.veiculos.FindAsync(id);
+
+        if (veiculo == null)
+        {
+            return NotFound();
+        }
+
+        veiculo.Id = atualizarVeiculo.Id;
+        veiculo.Fabricante = atualizarVeiculo.Fabricante;
+        veiculo.Modelo = atualizarVeiculo.Modelo;
+        veiculo.Ano = atualizarVeiculo.Ano;
+        veiculo.Bateria = atualizarVeiculo.Bateria;
+        veiculo.Carregamento = atualizarVeiculo.Carregamento;
+        veiculo.Potencia = atualizarVeiculo.Potencia;
+        veiculo.Torque = atualizarVeiculo.Torque;
+        veiculo.VelMaxima = atualizarVeiculo.VelMaxima;
+        veiculo.Tempo = atualizarVeiculo.Tempo;
+        veiculo.VolumePortaMalas = atualizarVeiculo.VolumePortaMalas;
+        veiculo.PneusRodas = atualizarVeiculo.PneusRodas;
+        veiculo.Garantia = atualizarVeiculo.Garantia;
+        veiculo.Preco = atualizarVeiculo.Preco;
+
+        await _gerenciar.SaveChangesAsync();
+
+        return Ok(veiculo);
+    }
 }
