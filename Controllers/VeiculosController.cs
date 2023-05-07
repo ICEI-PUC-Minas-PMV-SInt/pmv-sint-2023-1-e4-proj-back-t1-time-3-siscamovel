@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using siscm_data_management.Database;
+using siscm_data_management.Models.Especificacoes;
 
 namespace siscm_data_management.Controllers;
 
@@ -26,5 +27,21 @@ public class VeiculosController : Controller
         }
         
         return Ok(veiculos);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> AdicionarVeiculo([FromBody] Veiculos veiculosRequest)
+    {
+        veiculosRequest.Id = Guid.NewGuid();
+
+        await _gerenciar.veiculos.AddAsync(veiculosRequest);
+        await _gerenciar.SaveChangesAsync();
+
+        if (veiculosRequest == null)
+        {
+            return NoContent();
+        }        
+        
+        return Ok(veiculosRequest);
     }
 }
