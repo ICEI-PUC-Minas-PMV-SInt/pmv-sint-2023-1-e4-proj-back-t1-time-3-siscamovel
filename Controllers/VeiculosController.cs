@@ -75,4 +75,21 @@ public class VeiculosController : Controller
 
         return Ok(veiculo);
     }
+
+    [HttpDelete]
+    [Route("{id:Guid}")]
+    public async Task<IActionResult> RemoverVeiculo([FromRoute] Guid id)
+    {
+        var removerVeiculo = await _gerenciar.veiculos.FindAsync(id);
+
+        if (removerVeiculo == null)
+        {
+            return NotFound();
+        }
+
+        _gerenciar.veiculos.Remove(removerVeiculo);
+        await _gerenciar.SaveChangesAsync();
+
+        return Ok();
+    }
 }
