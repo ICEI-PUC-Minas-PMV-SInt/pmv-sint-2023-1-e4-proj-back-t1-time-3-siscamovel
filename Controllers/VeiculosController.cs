@@ -28,6 +28,20 @@ public class VeiculosController : Controller
         
         return Ok(veiculos);
     }
+    
+    [HttpGet]
+    [Route("{id:Guid}")]
+    public async Task<IActionResult> ObterTodosOsVeiculosPorId(Guid id)
+    {
+        var veiculosPorId = await _gerenciar.veiculos.FirstOrDefaultAsync(car => car.Id == id);
+        
+        if (veiculosPorId == null)
+        {
+            return NoContent();
+        }
+        
+        return Ok(veiculosPorId);
+    }    
 
     [HttpPost]
     public async Task<IActionResult> AdicionarVeiculo([FromBody] Veiculos veiculosRequest)
