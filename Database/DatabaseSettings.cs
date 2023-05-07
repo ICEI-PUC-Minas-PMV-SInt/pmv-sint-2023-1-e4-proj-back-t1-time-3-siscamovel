@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using siscm_data_management.Models.Especificacoes;
+
 namespace siscm_data_management.Database;
 
 public class DatabaseSettings : DbContext
@@ -7,4 +9,6 @@ public class DatabaseSettings : DbContext
     {
         
     }
+    
+    public DbSet<Veiculos> veiculos { get; set; }
 }
