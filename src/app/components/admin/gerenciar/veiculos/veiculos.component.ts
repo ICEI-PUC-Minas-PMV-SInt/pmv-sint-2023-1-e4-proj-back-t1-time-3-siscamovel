@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Veiculos } from 'src/app/models/veiculos.model';
+import { VeiculosService } from 'src/app/services/admin/gerenciar/veiculos.service';
 
 @Component({
   selector: 'app-veiculos',
@@ -8,26 +9,19 @@ import { Veiculos } from 'src/app/models/veiculos.model';
 })
 export class VeiculosComponent implements OnInit {
 
-  veiculos: Veiculos[] = [
-    {
-      fabricante: 'BYD',
-      modelo: 'TAN EV',
-      ano: 2022,
-      capacidade: '7 lugares',
-      potencia: '272 CV',
-      torque: '35,7 kgfm',
-      velocidadeMaxima: '186 km/h',
-      tempo: '4,6 s',
-      volumePortaMalas: '235/940/1655 L',
-      pneusRodas: '265/40 R22',
-      garantia: '5 anos',
-      preco: '529.890'
-    }
-  ];
+  veiculos: Veiculos[] = [];
 
-  constructor() { }
+  constructor(private veiculosService: VeiculosService) { }
 
   ngOnInit(): void {
-    this.veiculos.push()
+    this.veiculosService.getObterTodosOsVeiculos()
+    .subscribe({
+      next: (veiculos) => {
+        this.veiculos = veiculos;
+      },
+      error: (response) => {
+        console.log(response);
+      }
+    })
   }
 }
