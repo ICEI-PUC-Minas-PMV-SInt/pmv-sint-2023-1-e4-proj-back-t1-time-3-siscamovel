@@ -22,25 +22,45 @@
             </div>
 
             <div class="mb-3 row table-responsive">
-                <table class="table table-bordeless table-sm table-hover">
+                <table class="table table-bordeless table-sm table-hover" *ngIf="veiculos && veiculos.length > 0">
                     <thead>
                       <tr>
-                        <th scope="col">Imagem</th>
+                        <th scope="col">Fabricante</th>
                         <th scope="col">Modelo</th>
-                        <th scope="col">Fabricação</th>
-                        <th scope="col">Preço</th>
-                        <th scope="col">Potência / torque</th>
-                        <th scope="col">Autonomia máxima</th>
+                        <th scope="col">Ano</th>
+                        <th scope="col">Capacidade</th>
+                        <th scope="col">Potência</th>
+                        <th scope="col">Torque</th>
                         <th scope="col">Velocidade máxima</th>
-                        <th scope="col">Bateria</th>
-                        <th scope="col">Carregamento</th>
-                        <th scope="col">Recarga rápida</th>
-                        <th scope="col">Recarga completa</th>
-                        <th scope="col">Ações</th>
+                        <th scope="col">Tempo</th>
+                        <th scope="col">Volume do porta malas</th>
+                        <th scope="col">Pneus / Rodas</th>
+                        <th scope="col">Garantia</th>
+                        <th scope="col">Preço</th>
                       </tr>
                     </thead>
-                    <tbody id="listaRegistrosBody"></tbody>
-                  </table>       
+                    <tbody>
+                      <tr *ngFor="let veiculo of veiculos">
+                        <td>{{ veiculo.fabricante }}</td>
+                        <td>{{ veiculo.modelo }}</td>
+                        <td>{{ veiculo.ano }}</td>
+                        <td>{{ veiculo.capacidade }}</td>
+                        <td>{{ veiculo.potencia }}</td>
+                        <td>{{ veiculo.torque }}</td>
+                        <td>{{ veiculo.velocidadeMaxima }}</td>
+                        <td>{{ veiculo.tempo }}</td>
+                        <td>{{ veiculo.volumePortaMalas }}</td>
+                        <td>{{ veiculo.pneusRodas }}</td>
+                        <td>{{ veiculo.garantia }}</td>
+                        <td>{{ veiculo.preco }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p *ngIf="!veiculos || veiculos.length <= 0"> 
+                    Oops! Sem veículos cadastrados :/
+                    <br>
+                    Para adicionar um, clique em 'cadastrar novo veículo'.
+                  </p>
             </div>
         </div>
     </div>
@@ -62,8 +82,8 @@
         <div id='listaRegistros' class="modal-body">
             <form id='cadastroRegistro' class="row g-3 needs-validation">
               <div class="col-md-12">
-                <label for="imagemveiculo" class="form-label">Imagem do veículo</label>
-                <input type="text" class="form-control" id="imagemveiculo" required>
+                <label for="fabricante" class="form-label">Fabricante</label>
+                <input type="text" class="form-control" id="fabricante" required>
               </div>
                 <div class="col-md-6">
                   <label for="modelo" class="form-label">Modelo</label>
@@ -74,36 +94,40 @@
                   <input type="text" class="form-control" id="anoFabricacao" placeholder="2022" required>
                 </div>
                 <div class="col-md-6">
-                    <label for="preco" class="form-label">Preço</label>
-                    <input type="text" class="form-control" id="preco" required>
+                    <label for="capacidade" class="form-label">Capacidade</label>
+                    <input type="text" class="form-control" id="capacidade" required>
                 </div>
                 <div class="col-md-6">
-                    <label for="potenciaTorque" class="form-label">Potência / torque</label>
-                    <input type="text" class="form-control" id="potenciaTorque" required>
+                    <label for="potencia" class="form-label">Potência</label>
+                    <input type="text" class="form-control" id="potencia" required>
                 </div>
                 <div class="col-md-6">
-                  <label for="autonomiaMaxima" class="form-label">Autonomia máxima</label>
-                  <input type="text" class="form-control" id="autonomiaMaxima" required>
+                  <label for="torque" class="form-label">Torque</label>
+                  <input type="text" class="form-control" id="torque" required>
                 </div>
                 <div class="col-md-6">
                   <label for="velocidadeMaxima" class="form-label">Velocidade máxima</label>
                   <input type="text" class="form-control" id="velocidadeMaxima" required>
                 </div>
                 <div class="col-12">
-                    <label for="bateria" class="form-label">Bateria</label>
-                    <input type="text" class="form-control" id="bateria" required>
+                    <label for="tempo" class="form-label">Tempo</label>
+                    <input type="text" class="form-control" id="tempo" required>
                   </div>
                   <div class="col-12">
-                    <label for="carregamento" class="form-label">Forma de carregamento</label>
-                    <input type="text" class="form-control" id="carregamento" required>
+                    <label for="volumePortaMalas" class="form-label">Volume do Porta Malas</label>
+                    <input type="text" class="form-control" id="volumePortaMalas" required>
                   </div>
                   <div class="col-12">
-                    <label for="recargaRapidaVeiculo" class="form-label">Recarga rápida</label>
-                    <input type="text" class="form-control" id="recargaRapidaVeiculo" required>
+                    <label for="pneusRodas" class="form-label">Pneus / Rodas</label>
+                    <input type="text" class="form-control" id="pneusRodas" required>
                   </div>
                   <div class="col-12">
-                    <label for="recargaCompletaVeiculo" class="form-label">Recarga completa</label>
-                    <input type="text" class="form-control" id="recargaCompletaVeiculo" required>
+                    <label for="garantia" class="form-label">Garantia</label>
+                    <input type="text" class="form-control" id="garantia" required>
+                  </div>
+                  <div class="col-12">
+                    <label for="preco" class="form-label">Preço</label>
+                    <input type="text" class="form-control" id="preco" required>
                   </div>
                 <div class="col-12 modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
