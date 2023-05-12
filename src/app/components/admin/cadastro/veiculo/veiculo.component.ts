@@ -12,6 +12,7 @@ import { VeiculosService } from 'src/app/services/admin/gerenciar/veiculos.servi
 export class VeiculoComponent implements OnInit {
 
   cadastrarVeiculoRequest: Veiculos = {
+    id: '',
     fabricante: '',
     modelo: '',
     ano: 0,

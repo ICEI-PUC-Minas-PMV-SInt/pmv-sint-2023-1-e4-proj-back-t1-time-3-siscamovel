@@ -1,4 +1,5 @@
 export interface Veiculos {
+    id: String;
     fabricante: String
     modelo: String
     ano: Number

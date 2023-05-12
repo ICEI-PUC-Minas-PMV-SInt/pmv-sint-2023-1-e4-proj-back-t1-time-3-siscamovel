@@ -18,6 +18,7 @@ export class VeiculosService {
   }
 
   cadastrarVeiculo(cadastrarVeiculoRequest: Veiculos): Observable<Veiculos> {
+    cadastrarVeiculoRequest.id = '00000000-0000-0000-0000-000000000000'
     return this.http.post<Veiculos>(this.baseApiUrl + '/siscm/v1/Veiculos', cadastrarVeiculoRequest);
   }
 
