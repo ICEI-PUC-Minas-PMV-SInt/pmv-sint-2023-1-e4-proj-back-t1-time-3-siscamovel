@@ -16,4 +16,10 @@ export class VeiculosService {
   getObterTodosOsVeiculos(): Observable<Veiculos[]> {
     return this.http.get<Veiculos[]>(this.baseApiUrl + '/siscm/v1/Veiculos');
   }
+
+  cadastrarVeiculo(cadastrarVeiculoRequest: Veiculos): Observable<Veiculos> {
+    return this.http.post<Veiculos>(this.baseApiUrl + '/siscm/v1/Veiculos', cadastrarVeiculoRequest);
+  }
+
+
 }
