@@ -1,15 +1,15 @@
 export interface Veiculos {
-    id: String;
-    fabricante: String
-    modelo: String
+    id: string;
+    fabricante: string
+    modelo: string
     ano: Number
-    capacidade: String
-    potencia: String
-    torque: String
-    velocidadeMaxima: String
-    tempo: String
-    volumePortaMalas: String
-    pneusRodas: String
-    garantia: String
-    preco: String
+    capacidade: string
+    potencia: string
+    torque: string
+    velocidadeMaxima: string
+    tempo: string
+    volumePortaMalas: string
+    pneusRodas: string
+    garantia: string
+    preco: string
 }
