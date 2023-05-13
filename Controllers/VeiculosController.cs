@@ -74,11 +74,10 @@ public class VeiculosController : Controller
         veiculo.Fabricante = atualizarVeiculo.Fabricante;
         veiculo.Modelo = atualizarVeiculo.Modelo;
         veiculo.Ano = atualizarVeiculo.Ano;
-        veiculo.Bateria = atualizarVeiculo.Bateria;
-        veiculo.Carregamento = atualizarVeiculo.Carregamento;
+        veiculo.Capacidade = atualizarVeiculo.Capacidade;
         veiculo.Potencia = atualizarVeiculo.Potencia;
         veiculo.Torque = atualizarVeiculo.Torque;
-        veiculo.VelMaxima = atualizarVeiculo.VelMaxima;
+        veiculo.VelocidadeMaxima = atualizarVeiculo.VelocidadeMaxima;
         veiculo.Tempo = atualizarVeiculo.Tempo;
         veiculo.VolumePortaMalas = atualizarVeiculo.VolumePortaMalas;
         veiculo.PneusRodas = atualizarVeiculo.PneusRodas;
