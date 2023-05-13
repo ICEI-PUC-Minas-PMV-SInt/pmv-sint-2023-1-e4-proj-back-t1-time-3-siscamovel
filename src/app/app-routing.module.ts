@@ -8,6 +8,7 @@ import { PeopleComponent } from './components/worldwide/people/people.component'
 import { HelloSiscmComponent } from './components/siscamovel/hello-siscm/hello-siscm.component';
 // Formulários de cadastro
 import { VeiculoComponent } from './components/admin/cadastro/veiculo/veiculo.component';
+import { EditarVeiculoComponent } from './components/admin/edicao/editar-veiculo/editar-veiculo.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'admin/cadastro/veiculo',
     component: VeiculoComponent
+  },
+  {
+    path: 'admin/editar/veiculo/:id',
+    component: EditarVeiculoComponent
   },
   {
     path: 'admin/login',

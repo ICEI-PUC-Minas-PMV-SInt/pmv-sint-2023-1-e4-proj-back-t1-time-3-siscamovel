@@ -1,0 +1,66 @@
+<app-header></app-header>
+
+<div class="container">
+    <main>
+      <div class="py-4">
+        <h2>Editar veículo: {{ detalhesVeiculo.fabricante }} {{ detalhesVeiculo.modelo }}</h2>
+      </div>
+      <div class="row g-5">
+        <div class="col-md-7 col-lg-8">
+          <h4 class="mb-3">Características</h4>
+          <hr class="my-4">
+          <form #form="ngForm" (ngSubmit)="editarVeiculo()">
+            <div class="row g-3">
+              <div class="col-sm-12">
+                <label for="fabricante" class="form-label">Fabricante</label> <input type="text" class="form-control" id="fabricante" name="fabricante" [(ngModel)]="detalhesVeiculo.fabricante" placeholder="" required>
+              </div>
+              <div class="col-sm-6">
+                <label for="modelo" class="form-label">Modelo</label> <input type="text" class="form-control" id="modelo" name="modelo" [(ngModel)]="detalhesVeiculo.modelo" placeholder="" required>
+              </div>
+              <div class="col-sm-6">
+                <label for="ano" class="form-label">Ano de fabricação</label> <input type="number" class="form-control" id="ano" name="ano" [(ngModel)]="detalhesVeiculo.ano" placeholder="" required>
+              </div>
+              <div class="col-sm-6">
+                <label for="capacidade" class="form-label">Capacidade</label> <input type="text" class="form-control" id="capacidade" name="capacidade" [(ngModel)]="detalhesVeiculo.capacidade" placeholder="" required>
+              </div>
+              <div class="col-sm-6">
+                <label for="potencia" class="form-label">Potência</label> <input type="text" class="form-control" id="potencia" name="potencia" [(ngModel)]="detalhesVeiculo.potencia" placeholder="" required>
+              </div>
+              <div class="col-sm-6">
+                <label for="torque" class="form-label">Torque</label> <input type="text" class="form-control" id="torque" name="torque" [(ngModel)]="detalhesVeiculo.torque" placeholder="" required>
+              </div>
+              <div class="col-sm-6">
+                <label for="velocidadeMaxima" class="form-label">Velocidade Máxima</label> <input type="text" class="form-control" id="velocidadeMaxima" name="velocidadeMaxima" [(ngModel)]="detalhesVeiculo.velocidadeMaxima" placeholder="" required>
+              </div>
+              <div class="col-12">
+                <label for="tempo" class="form-label">Tempo</label> <input type="text" class="form-control" id="tempo" name="tempo" [(ngModel)]="detalhesVeiculo.tempo" placeholder="" required>
+              </div>
+              <div class="col-12">
+                <label for="volumePortaMalas" class="form-label">Volume do Porta Malas</label> <input type="text" class="form-control" id="volumePortaMalas" name="volumePortaMalas" [(ngModel)]="detalhesVeiculo.volumePortaMalas" placeholder="" required>
+              </div>
+              <div class="col-12">
+                <label for="pneusRodas" class="form-label">Pneus / Rodas</label> <input type="text" class="form-control" id="pneusRodas" name="pneusRodas" [(ngModel)]="detalhesVeiculo.pneusRodas" placeholder="" required>
+              </div><br>
+              <br>
+              <h4 class="mb-2">Preço e garantia</h4>
+              <hr class="my-4">
+              <div class="col-sm-6">
+                <label for="preco" class="form-label">Preço</label> <input type="text" class="form-control" id="preco" name="preco" placeholder="" [(ngModel)]="detalhesVeiculo.preco" required>
+              </div>
+              <div class="col-sm-6">
+                <label for="garantia" class="form-label">Garantia</label> <input type="text" class="form-control" id="garantia" name="garantia" [(ngModel)]="detalhesVeiculo.garantia" placeholder="" required>
+              </div><br>
+              <br>
+              <hr class="my-4">
+                <button class="btn btn-primary" type="submit">Alterar informações do veículo</button> 
+                <a href="admin/gerenciar/veiculos" class="btn btn-secondary" type="button">Cancelar solicitação</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="p-5"></div>
+
+<app-footer></app-footer>

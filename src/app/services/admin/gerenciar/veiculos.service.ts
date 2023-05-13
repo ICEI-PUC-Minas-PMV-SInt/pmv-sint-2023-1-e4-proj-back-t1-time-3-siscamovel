@@ -22,5 +22,11 @@ export class VeiculosService {
     return this.http.post<Veiculos>(this.baseApiUrl + '/siscm/v1/Veiculos', cadastrarVeiculoRequest);
   }
 
+  getObterVeiculos(id: string): Observable<Veiculos> {
+    return this.http.get<Veiculos>(this.baseApiUrl + '/siscm/v1/Veiculos/' + id);
+  }
 
+  atualizarInfoVeiculo(id: string, atualizarInfoVeiculoRequest: Veiculos): Observable<Veiculos> {
+    return this.http.put<Veiculos>(this.baseApiUrl + '/siscm/v1/Veiculos/' + id, atualizarInfoVeiculoRequest)
+  }
 }

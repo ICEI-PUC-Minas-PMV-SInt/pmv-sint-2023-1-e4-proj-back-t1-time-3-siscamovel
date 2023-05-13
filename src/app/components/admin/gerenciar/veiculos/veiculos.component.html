@@ -37,6 +37,7 @@
                         <th scope="col">Pneus / Rodas</th>
                         <th scope="col">Garantia</th>
                         <th scope="col">Preço</th>
+                        <th scope="col">Opções</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -53,6 +54,7 @@
                         <td>{{ veiculo.pneusRodas }}</td>
                         <td>{{ veiculo.garantia }}</td>
                         <td>{{ veiculo.preco }}</td>
+                        <td><a [routerLink]="['/admin', 'editar', 'veiculo', veiculo.id]">Ver</a></td>
                       </tr>
                     </tbody>
                   </table>
