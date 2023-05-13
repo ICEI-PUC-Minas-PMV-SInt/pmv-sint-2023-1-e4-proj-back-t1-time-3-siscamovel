@@ -11,6 +11,8 @@ export class VeiculosComponent implements OnInit {
 
   veiculos: Veiculos[] = [];
 
+  buscaTexto = '';
+
   constructor(private veiculosService: VeiculosService) { }
 
   ngOnInit(): void {

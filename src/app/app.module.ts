@@ -19,6 +19,7 @@ import { HeaderHomeComponent } from './components/siscamovel/header-home/header-
 import { ModaisSiscmComponent } from './components/siscamovel/modais-siscm/modais-siscm.component';
 import { VeiculoComponent } from './components/admin/cadastro/veiculo/veiculo.component';
 import { EditarVeiculoComponent } from './components/admin/edicao/editar-veiculo/editar-veiculo.component';
+import { BuscaTextoPipe } from './pipes/busca-texto.pipe';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { EditarVeiculoComponent } from './components/admin/edicao/editar-veiculo
     HeaderHomeComponent,
     ModaisSiscmComponent,
     VeiculoComponent,
-    EditarVeiculoComponent
+    EditarVeiculoComponent,
+    BuscaTextoPipe
   ],
   imports: [
     BrowserModule,
