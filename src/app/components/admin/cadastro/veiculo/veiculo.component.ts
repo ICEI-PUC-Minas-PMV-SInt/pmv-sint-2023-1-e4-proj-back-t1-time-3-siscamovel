@@ -9,7 +9,7 @@ import { VeiculosService } from 'src/app/services/admin/gerenciar/veiculos.servi
   styleUrls: ['./veiculo.component.css']
 })
 
-export class VeiculoComponent implements OnInit {
+export class CadastrarVeiculoComponent implements OnInit {
 
   cadastrarVeiculoRequest: Veiculos = {
     id: '',

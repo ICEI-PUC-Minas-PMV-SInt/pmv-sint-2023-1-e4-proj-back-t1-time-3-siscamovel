@@ -17,7 +17,7 @@ import { FooterComponent } from './components/general/footer/footer.component';
 import { HeaderComponent } from './components/general/header/header.component';
 import { HeaderHomeComponent } from './components/siscamovel/header-home/header-home.component';
 import { ModaisSiscmComponent } from './components/siscamovel/modais-siscm/modais-siscm.component';
-import { VeiculoComponent } from './components/admin/cadastro/veiculo/veiculo.component';
+import { CadastrarVeiculoComponent } from './components/admin/cadastro/veiculo/veiculo.component';
 import { EditarVeiculoComponent } from './components/admin/edicao/editar-veiculo/editar-veiculo.component';
 import { BuscaTextoPipe } from './pipes/busca-texto.pipe';
 import { NotfoundComponent } from './components/general/notfound/notfound.component';
@@ -37,7 +37,7 @@ import { NotfoundComponent } from './components/general/notfound/notfound.compon
     HeaderComponent,
     HeaderHomeComponent,
     ModaisSiscmComponent,
-    VeiculoComponent,
+    CadastrarVeiculoComponent,
     EditarVeiculoComponent,
     BuscaTextoPipe,
     NotfoundComponent
