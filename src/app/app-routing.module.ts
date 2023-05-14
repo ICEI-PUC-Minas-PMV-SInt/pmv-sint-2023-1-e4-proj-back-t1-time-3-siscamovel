@@ -10,6 +10,7 @@ import { NotfoundComponent } from './components/general/notfound/notfound.compon
 // Formulários de cadastro
 import { CadastrarVeiculoComponent } from './components/admin/cadastro/veiculo/veiculo.component';
 import { EditarVeiculoComponent } from './components/admin/edicao/editar-veiculo/editar-veiculo.component';
+import { CadastrarAdminComponent } from './components/admin/cadastro/admin/admin.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,9 @@ const routes: Routes = [
     component: EditarVeiculoComponent
   },
   {
+    path: 'admin/cadastro/admin',
+    component: CadastrarAdminComponent
+  },
     path: 'admin/login',
     component: LoginComponent
   },  

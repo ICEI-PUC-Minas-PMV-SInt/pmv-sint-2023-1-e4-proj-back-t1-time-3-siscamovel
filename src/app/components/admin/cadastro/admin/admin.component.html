@@ -1,0 +1,39 @@
+<app-header></app-header>
+
+<div class="container">
+    <main>
+      <div class="py-4">
+        <h2>Cadastro de admin</h2>
+      </div>
+      <div class="row g-5">
+        <div class="col-md-7 col-lg-8">
+          <h4 class="mb-3">Dados</h4>
+          <hr class="my-4">
+          <form #form="ngForm" (ngSubmit)="adicionarAdmin()">
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="nomeadmin" class="form-label">Nome</label> <input type="text" class="form-control" id="nomeadmin" name="nomeadmin" [(ngModel)]="cadastrarAdminRequest.nomeadmin" placeholder="" required>
+              </div>
+              <div class="col-sm-6">
+                <label for="siscamail" class="form-label">Siscamail</label> <input type="email" class="form-control" id="siscamail" name="siscamail" [(ngModel)]="cadastrarAdminRequest.siscamail" placeholder="" required>
+              </div><br>
+              <br>
+              <h4 class="mb-2">Admin ID</h4>
+              <hr class="my-4">
+              <div class="col-sm-12">
+                <label for="id" class="form-label">Nº Admin ID</label> <input type="text" class="form-control" id="id" name="id" placeholder="" [(ngModel)]="cadastrarAdminRequest.id" required readonly>
+              </div><br>
+              <br>
+              <hr class="my-4">
+                <button class="btn btn-primary" type="submit">Cadastrar admin</button> 
+                <a href="admin/gerenciar/admin" class="btn btn-secondary" type="button">Cancelar solicitação</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="p-5"></div>
+
+<app-footer></app-footer>
