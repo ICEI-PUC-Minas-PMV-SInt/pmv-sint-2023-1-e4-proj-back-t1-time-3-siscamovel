@@ -1,80 +1,55 @@
 <app-header></app-header>
 
-    <section class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="mb-3 row">
-                    <h1>conta de administradores</h1>
-                </div>
+<section class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="mb-3 row">
+                <h1>conta de administradores</h1>
+            </div>
 
-                <div class="mb-3 row">
-                    <div class="col-sm-10">
-                        <a class="btn btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#gerenciarAdmin">cadastrar novo admin</a>
-                    </div>
+            <div class="mb-3 row">
+                <div class="col-sm-10">
+                    <a href="admin/cadastro/admin" class="btn btn-outline-dark" type="button" >cadastrar admin</a>
                 </div>
+            </div>
 
-              <br>
+            <br>
 
-              <div class="mb-3 row">
-                <div class="col-sm-12">
-                  <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Pesquisar" autofocus id="inputPesquisa">
-                </div>
+            <div class="mb-3 row">
+              <div class="col-sm-12">
+                <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Pesquisar" [(ngModel)]="buscaTexto" autofocus>
               </div>
+            </div>
 
-                <div class="mb-3 row">
-                    <table class="table table-responsive">
-                      <thead>
-                        <tr>
-                          <th scope="col">ID</th>
-                          <th scope="col">Admin name</th>
-                          <th scope="col">E-mail</th>
-                          <th scope="col">Opções</th>
-                        </tr>
-                      </thead>
-                      <tbody id="listaAdminsBody"></tbody>
-                      </table>
-                </div>
-
+            <div class="mb-3 row table-responsive">
+                <table class="table table-bordeless table-sm table-hover" *ngIf="admins && admins.length > 0">
+                    <thead>
+                      <tr>
+                        <th scope="col">Admin ID</th>
+                        <!--<th scope="col">Nome</th>-->
+                        <th scope="col">E-mail</th>
+                        <th scope="col">Opções</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let admin of admins | buscaTexto: buscaTexto">
+                        <td>{{ admin.id }}</td>
+                        <!--<td>{{ admin.nomeadmin }}</td>-->
+                        <td>{{ admin.siscamail }}</td>
+                        <td><a [routerLink]="['/admin', 'editar', 'admin', admin.id]">Ver</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p *ngIf="!admins || admins.length <= 0"> 
+                    Oops! Base de dados não encontrada :/
+                    <br>
+                    Para adicionar, clique em 'cadastrar admin'.
+                  </p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <br>
+<br>
 
 <app-footer></app-footer>
-
-
-<!-- Modal -->
-<div class="modal fade" id="gerenciarAdmin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="gerenciarAdminLabel">Cadastro de admins</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div id='listaAdmins' class="modal-body">
-            <form  id='cadastroAdmin' class="row g-3">
-                <div class="col-md-8">
-                  <label for="nomeAdmin" class="form-label">Nome</label>
-                  <input type="text" class="form-control" id="nomeAdmin" placeholder="karl marx" required>
-                </div>
-                <div class="col-md-4">
-                    <label for="adminID" class="form-label">Admin ID</label>
-                    <input type="text" class="form-control" id="adminID" readonly>
-                  </div>
-                <div class="col-md-6">
-                  <label for="emailAdmin" class="form-label">E-mail</label>
-                  <input type="email" class="form-control" id="emailAdmin" placeholder="karl@marx.de" required>
-                </div>
-                <div class="col-md-6">
-                    <label for="senhaAdmin" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="senhaAdmin" required>
-                </div>
-                <div class="col-12">
-                  <button type="submit" class="btn btn-primary">Salvar dados</button>
-                </div>
-              </form>
-        </div>
-      </div>
-    </div>
-  </div>
