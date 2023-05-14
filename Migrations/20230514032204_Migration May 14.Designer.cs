@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using siscm_data_management.Database;
 
@@ -10,9 +11,11 @@ using siscm_data_management.Database;
 namespace siscm_data_management.Migrations
 {
     [DbContext(typeof(DatabaseSettings))]
-    partial class DatabaseSettingsModelSnapshot : ModelSnapshot
+    [Migration("20230514032204_Migration May 14")]
+    partial class MigrationMay14
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
