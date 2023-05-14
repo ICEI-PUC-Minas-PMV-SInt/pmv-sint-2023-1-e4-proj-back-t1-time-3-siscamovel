@@ -11,4 +11,5 @@ public class DatabaseSettings : DbContext
     }
     
     public DbSet<Veiculos> veiculos { get; set; }
+    public DbSet<Admins> admins { get; set; }
 }
