@@ -11,6 +11,7 @@ import { NotfoundComponent } from './components/general/notfound/notfound.compon
 import { CadastrarVeiculoComponent } from './components/admin/cadastro/veiculo/veiculo.component';
 import { EditarVeiculoComponent } from './components/admin/edicao/editar-veiculo/editar-veiculo.component';
 import { CadastrarAdminComponent } from './components/admin/cadastro/admin/admin.component';
+import { EditarAdminComponent } from './components/admin/edicao/editar-admin/editar-admin.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,11 @@ const routes: Routes = [
     path: 'admin/cadastro/admin',
     component: CadastrarAdminComponent
   },
+  {
+    path: 'admin/editar/admin/:id',
+    component: EditarAdminComponent
+  },
+  {
     path: 'admin/login',
     component: LoginComponent
   },  
