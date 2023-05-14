@@ -6,6 +6,7 @@ import { LoginComponent } from './components/admin/login/login.component';
 import { HomeComponent } from './components/admin/home/home.component';
 import { PeopleComponent } from './components/worldwide/people/people.component';
 import { HelloSiscmComponent } from './components/siscamovel/hello-siscm/hello-siscm.component';
+import { NotfoundComponent } from './components/general/notfound/notfound.component';
 // Formulários de cadastro
 import { VeiculoComponent } from './components/admin/cadastro/veiculo/veiculo.component';
 import { EditarVeiculoComponent } from './components/admin/edicao/editar-veiculo/editar-veiculo.component';
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path: 'worldwide/people',
     component: PeopleComponent
+  },
+  {
+    path: '**', pathMatch: 'full',
+    component: NotfoundComponent
   }
 ];
 
