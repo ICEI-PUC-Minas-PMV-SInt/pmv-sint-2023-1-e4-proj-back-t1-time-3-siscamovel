@@ -12,7 +12,7 @@
           <form #form="ngForm" (ngSubmit)="adicionarAdmin()">
             <div class="row g-3">
               <div class="col-sm-6">
-                <label for="nomeadmin" class="form-label">Nome</label> <input type="text" class="form-control" id="nomeadmin" name="nomeadmin" [(ngModel)]="cadastrarAdminRequest.nomeadmin" placeholder="" required>
+                <label for="nomeadmin" class="form-label">Nome (somente leitura após cadastro)</label> <input type="text" class="form-control" id="nomeadmin" name="nomeadmin" [(ngModel)]="cadastrarAdminRequest.nomeadmin" placeholder="" required>
               </div>
               <div class="col-sm-6">
                 <label for="siscamail" class="form-label">Siscamail</label> <input type="email" class="form-control" id="siscamail" name="siscamail" [(ngModel)]="cadastrarAdminRequest.siscamail" placeholder="" required>
