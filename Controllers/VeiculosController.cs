@@ -15,7 +15,11 @@ public class VeiculosController : Controller
     {
         _gerenciar = databaseSettings;
     }
-
+    
+    /// <summary>
+    /// Obter lista de cadastro de todos os veiculos
+    /// </summary>
+    /// <param name="model">Dados do veiculo</param>
     [HttpGet]
     public async Task<IActionResult> ObterTodosOsVeiculos()
     {
@@ -29,6 +33,10 @@ public class VeiculosController : Controller
         return Ok(veiculos);
     }
     
+    /// <summary>
+    /// Obter lista de cadastro de veiculo por ID
+    /// </summary>
+    /// <param name="model">Dados do veiculo</param>
     [HttpGet]
     [Route("{id:Guid}")]
     public async Task<IActionResult> ObterTodosOsVeiculosPorId(Guid id)
@@ -43,6 +51,9 @@ public class VeiculosController : Controller
         return Ok(veiculosPorId);
     }    
 
+    /// <summary>
+    /// Cadastrar um veiculo
+    /// </summary>
     [HttpPost]
     public async Task<IActionResult> AdicionarVeiculo([FromBody] Veiculos veiculosRequest)
     {
@@ -59,6 +70,9 @@ public class VeiculosController : Controller
         return Ok(veiculosRequest);
     }
 
+    /// <summary>
+    /// Editar dados de um veiculo pelo identificador
+    /// </summary>
     [HttpPut]
     [Route("{id:Guid}")]
     public async Task<IActionResult> AlterarDadosVeiculo([FromRoute] Guid id, Veiculos atualizarVeiculo)
@@ -89,6 +103,9 @@ public class VeiculosController : Controller
         return Ok(veiculo);
     }
 
+    /// <summary>
+    /// Excluir um veiculo (obrigatoriamente pelo ID)
+    /// </summary>
     [HttpDelete]
     [Route("{id:Guid}")]
     public async Task<IActionResult> RemoverVeiculo([FromRoute] Guid id)

@@ -16,6 +16,10 @@ public class AdminsController : Controller
         _gerenciar = databaseSettings;
     }
 
+    /// <summary>
+    /// Obter lista de cadastro de todas as pessoas administradoras do sistema
+    /// </summary>
+    /// <param name="model">Dados da pessoa</param>    
     [HttpGet]
     public async Task<IActionResult> ObterTodosAdmins()
     {
@@ -29,6 +33,10 @@ public class AdminsController : Controller
         return Ok(admins);
     }
     
+    /// <summary>
+    /// Obter lista de cadastro de administador(a) pelo ID
+    /// </summary>
+    /// <param name="model">Dados da pessoa</param>   
     [HttpGet]
     [Route("{id:Guid}")]
     public async Task<IActionResult> ObterTodosAdminsPorId(Guid id)
@@ -43,6 +51,10 @@ public class AdminsController : Controller
         return Ok(adminsPorId);
     }    
 
+    /// <summary>
+    /// Cadastrar pessoa administradora de sistema
+    /// </summary>
+    /// <param name="model">Dados da pessoa</param>   
     [HttpPost]
     public async Task<IActionResult> AdicionarAdmin([FromBody] Admins adminsRequest)
     {
@@ -59,6 +71,10 @@ public class AdminsController : Controller
         return Ok(adminsRequest);
     }
 
+    /// <summary>
+    /// Alterar dados de pessoa administradora
+    /// </summary>
+    /// <param name="model">Dados da pessoa</param>
     [HttpPut]
     [Route("{id:Guid}")]
     public async Task<IActionResult> AlterarDadosAdmin([FromRoute] Guid id, Admins atualizarAdmin)
@@ -79,6 +95,10 @@ public class AdminsController : Controller
         return Ok(admin);
     }
 
+    /// <summary>
+    /// Remover pessoa administradora da base de dados
+    /// </summary>
+    /// <param name="model">Dados da pessoa</param>   
     [HttpDelete]
     [Route("{id:Guid}")]
     public async Task<IActionResult> RemoverAdmin([FromRoute] Guid id)

@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using siscm_data_management.Database;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,7 +9,24 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+    {
+       c.SwaggerDoc("v1", new OpenApiInfo
+       {
+           Title = " SISCM Data Management (Only for educational purposes)",
+           Description = "API para gerenciamento de dados da plataforma SISCAMOVEL",
+           Version = "v1",
+           Contact = new OpenApiContact
+           {
+               Name = "Danilo Santos",
+               Url = new Uri("https://artededan.com"),
+           }
+       });
+       var xmlFile = "siscm-data-management.xml";
+       var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+       c.IncludeXmlComments(xmlPath);
+    });
+
 builder.Services.AddCors(options => options.AddPolicy(name: "SiscmOrigins", 
     policy => 
     { 
