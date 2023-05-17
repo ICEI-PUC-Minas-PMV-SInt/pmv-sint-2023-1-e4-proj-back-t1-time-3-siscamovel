@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-    - release-interface  
+    - staging/interface  
 
 env:
   AZURE_WEBAPP_NAME: 'fed-siscamovel'    # set this to your application's name
