@@ -19,7 +19,7 @@ const routes: Routes = [
     component: HelloSiscmComponent
   },
   {
-    path: 'admin/gerenciar/admin',
+    path: '#/admin/gerenciar/admin',
     component: AdminComponent
   },
   {
