@@ -19,43 +19,43 @@ const routes: Routes = [
     component: HelloSiscmComponent
   },
   {
-    path: 'admin/gerenciar/admin',
+    path: '#/admin/gerenciar/admin',
     component: AdminComponent
   },
   {
-    path: 'admin/gerenciar/veiculos',
+    path: '#/admin/gerenciar/veiculos',
     component: VeiculosComponent
   },
   {
-    path: 'admin/cadastro/veiculo',
+    path: '#/admin/cadastro/veiculo',
     component: CadastrarVeiculoComponent
   },
   {
-    path: 'admin/editar/veiculo/:id',
+    path: '#/admin/editar/veiculo/:id',
     component: EditarVeiculoComponent
   },
   {
-    path: 'admin/cadastro/admin',
+    path: '#/admin/cadastro/admin',
     component: CadastrarAdminComponent
   },
   {
-    path: 'admin/editar/admin/:id',
+    path: '#/admin/editar/admin/:id',
     component: EditarAdminComponent
   },
   {
-    path: 'admin/login',
+    path: '#/admin/login',
     component: LoginComponent
   },  
   {
-    path: 'admin/home',
+    path: '#/admin/home',
     component: HomeComponent
   },
   {
-    path: 'worldwide/people',
+    path: '#/worldwide/people',
     component: PeopleComponent
   },
   {
-    path: '**', pathMatch: 'full',
+    path: '#/**',
     component: NotfoundComponent
   }
 ];
