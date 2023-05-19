@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    baseApiSiscm: 'https://api-siscamovel.azurewebsites.net'
+    baseApiSiscm: 'http://api-siscamovel.azurewebsites.net'
 };
