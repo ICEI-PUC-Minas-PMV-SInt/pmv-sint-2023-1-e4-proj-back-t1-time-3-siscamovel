@@ -12,6 +12,8 @@ import { CadastrarVeiculoComponent } from './components/admin/cadastro/veiculo/v
 import { EditarVeiculoComponent } from './components/admin/edicao/editar-veiculo/editar-veiculo.component';
 import { CadastrarAdminComponent } from './components/admin/cadastro/admin/admin.component';
 import { EditarAdminComponent } from './components/admin/edicao/editar-admin/editar-admin.component';
+// Busca
+import { ComparaeComponent } from './components/siscamovel/comparae/comparae.component';
 
 const routes: Routes = [
   {
@@ -53,6 +55,10 @@ const routes: Routes = [
   {
     path: 'worldwide/people',
     component: PeopleComponent
+  },
+  {
+    path: 'comparae',
+    component: ComparaeComponent
   },
   {
     path: '**', pathMatch: 'full',

@@ -23,6 +23,7 @@ import { CadastrarAdminComponent } from './components/admin/cadastro/admin/admin
 import { EditarAdminComponent } from './components/admin/edicao/editar-admin/editar-admin.component';
 import { BuscaTextoPipe } from './pipes/busca-texto.pipe';
 import { NotfoundComponent } from './components/general/notfound/notfound.component';
+import { ComparaeComponent } from './components/siscamovel/comparae/comparae.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { NotfoundComponent } from './components/general/notfound/notfound.compon
     CadastrarAdminComponent,
     EditarAdminComponent,
     BuscaTextoPipe,
-    NotfoundComponent
+    NotfoundComponent,
+    ComparaeComponent
   ],
   imports: [
     BrowserModule,
