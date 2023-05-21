@@ -1,6 +1,22 @@
-# AnythingButMe
+# Anything But Me
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+[![Watch the video](https://i.ytimg.com/vi/olo9MCKosAI/maxresdefault.jpg)](https://www.youtube.com/watch?v=olo9MCKosAI)
+
+'Anything but me' é o codenome do projeto de interface do SISCAMOVEL com o objetivo de mostrar ao mundo os dados consumidos por meio da [API](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e4-proj-dist-t1-time4-siscamovel/tree/dev/api) de forma intuitiva. Para construção, além de muita pesquisa, teve como companhia várias horas de execução da belíssima arte da MUNA, uma banda americana de indie pop composta por Katie Gavin, Josette Maskin e Naomi McPherson.
+
+Para saber as rotas da aplicação, consultar o arquivo `app-routing.module.ts`.
+
+Este projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-cli) versão 15.2.4.
+
+## Instalação Angular
+Seguir instruções dessa [página](https://www.geeksforgeeks.org/how-to-install-angularjs-on-linux).
+
+## Download front-end
+```bash
+# Sync
+$ git clone https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e4-proj-dist-t1-time4-siscamovel.git -b dev/interface
+
+```
 
 ## Development server
 
