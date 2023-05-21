@@ -6,7 +6,6 @@ import { PathLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HelloSiscmComponent } from './components/siscamovel/hello-siscm/hello-siscm.component';
 import { LoginComponent } from './components/admin/login/login.component';
 import { HomeComponent } from './components/admin/home/home.component';
@@ -49,7 +48,6 @@ import { NotfoundComponent } from './components/general/notfound/notfound.compon
   ],
   imports: [
     BrowserModule,
-    NgbModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule
