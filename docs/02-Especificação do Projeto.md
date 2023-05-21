@@ -82,7 +82,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-003| O sistema deve rodar em diversos tipos de navegadores |  ALTA | 
 |RNF-004| O sistema deve ser intuitivo e de fácil compreensão ao usuário |  MÉDIA | 
 |RNF-005| O sistema deve ficar no ar 24h |  MÉDIA | 
-|RNF-006| Para fins educacionais, o sistema apresentará dados cadastrados na API de forma pública |  ALTA | 
+|RNF-006| Para fins educacionais, a API deve apresentar os dados cadastrados publicamente e sem nenhum tipo de autenticação / autorização |  ALTA | 
 |RNF-007| O sistema deve ter certificação de segurança | ALTA | 
 |RNF-008| O sistema deve usar MariaDB para salvar dados |  MÉDIA | 
 |RNF-009| O sistema deve respeitar as boas práticas de acessibilidade | MÉDIA
@@ -94,7 +94,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |RNUM| Descrição                                          |
 |--|-------------------------------------------------------|
-|**R1**| O front end deve ser desenvolvido com a linguagem Typescript e para isso deve ser utilizado o framework Angular na versão mais recente. |
+|**R1**| O front end deve ser desenvolvido com a linguagem TypeScript e para isso deve ser utilizado o framework Angular na versão mais recente. |
 |**R2**| Para a construção e padronização de interface do usuário, deve ser utilizado o framework Bootstrap como um facilitador do guia de estilo, uso de media queries e sistema de grid para responsividade em diversos aparelhos. |
 |**R3**| Como forma de transporte de informações deve ser utilizado o formato JSON. |
 |**R4**| O sistema deverá ter um microsserviço para armazenamento de dados (cadastro e informações do veículo). |
@@ -153,8 +153,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 
 ### Diagramas
-Ver <a href="docs/05-Arquitetura da Solução.md"> Arquitetura da Solução</a>.
+Ver <a href="https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e4-proj-dist-t1-time4-siscamovel/blob/main/docs/05-Arquitetura%20da%20Solu%C3%A7%C3%A3o.md"> Arquitetura da Solução</a>.
 
 
 ### Descrição / Abordagem de ferramentas de testes
-Ver <a href="docs/09-Registro de Testes de Software.md"> Registro de Testes de Software</a>.
+Ver <a href="https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e4-proj-dist-t1-time4-siscamovel/blob/main/docs/09-Registro%20de%20Testes%20de%20Software.md"> Registro de Testes de Software</a>.

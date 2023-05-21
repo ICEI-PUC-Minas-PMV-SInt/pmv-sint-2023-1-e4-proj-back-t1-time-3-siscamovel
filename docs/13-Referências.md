@@ -5,5 +5,4 @@
 > - [Angular](https://angular.io/docs)
 > - [TypeScript](https://www.typescriptlang.org/docs/)
 > - [Bootstrap 5](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
-> - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
-> - [Referências Bibliográficas da ABNT](https://comunidade.rockcontent.com/referencia-bibliografica-abnt/)
+> - [Normas ABNT](https://normas-abnt.espm.br/)

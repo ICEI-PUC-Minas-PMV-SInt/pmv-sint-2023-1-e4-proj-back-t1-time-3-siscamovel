@@ -1,38 +1,7 @@
 # Arquitetura da Solução
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
-
-Baseada na estrutura web cliente/servidor. Essa comunicação entre clientes e servidores é feita através da internet pelo protocolo HTTP que é o protocolo base.
-
-## Diagrama de componentes
-
-Diagrama que permite a modelagem física de um sistema, através da visão dos seus componentes e relacionamentos entre os mesmos.
-
-Exemplo: 
-
-Os componentes que fazem parte da solução são apresentados na Figura XX.
-
-![Diagrama de Componentes](img/componentes.png)
-<center>Figura XX - Arquitetura da Solução</center>
-
-A solução implementada conta com os seguintes módulos:
-- **Navegador** - Interface básica do sistema  
-  - **Páginas Web** - Conjunto de arquivos HTML, CSS, JavaScript e imagens que implementam as funcionalidades do sistema.
-   - **Local Storage** - armazenamento mantido no Navegador, onde são implementados bancos de dados baseados em JSON. São eles: 
-     - **Canais** - seções de notícias apresentadas 
-     - **Comentários** - registro de opiniões dos usuários sobre as notícias
-     - **Preferidas** - lista de notícias mantidas para leitura e acesso posterior
- - **News API** - plataforma que permite o acesso às notícias exibidas no site.
- - **Hospedagem** - local na Internet onde as páginas são mantidas e acessadas pelo navegador. 
-
-> **Links Úteis**:
->
-> - [Whimsical](https://whimsical.com/)
-
-Inclua um diagrama da solução e descreva os módulos e as tecnologias que fazem parte da solução. Discorra sobre o diagrama.
-
-A imagem a seguir ilustra a o fluxo do usuário em nossa solução. Assim
-que o usuário entra na plataforma, ele é apresentado à tela inicial
+O diagrama a seguir ilustra o fluxo do usuário em nossa solução. Assim
+que o usuário entra na plataforma, ele é apresentado a tela inicial
 (Tela 1) onde ele é confrontado com as opções de editar seu perfil ou
 então visualizar sua galeria.
 
@@ -55,8 +24,19 @@ escolher salvar ou deletar o post. Em ambos os casos o status é
 notificado para o usuário (Tela 8) e em seguida ele é redirecionado
 para a Tela 2.
 
+## Diagrama da Solução
+
 ![SISCAMOVEL User Flow](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e4-proj-dist-t1-time4-siscamovel/raw/main/img/siscamovel-userflow.jpg)
 
+
+## Diagrama de Contexto
+
+![SISCAMOVEL DIAG CONTEXT](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e4-proj-dist-t1-time4-siscamovel/raw/main/img/diagrama-contexto.png)
+
+
+## Diagrama de Container
+
+![SISCAMOVEL DIAG CONTAINER](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e4-proj-dist-t1-time4-siscamovel/raw/main/img/diagrama-container.png)
 
 ## Tecnologias Utilizadas
 
