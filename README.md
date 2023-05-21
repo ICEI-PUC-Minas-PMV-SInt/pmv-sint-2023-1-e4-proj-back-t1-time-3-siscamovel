@@ -16,8 +16,10 @@
 * Luiz Gomes
 
 ## Instruções de utilização
+Para usuários, basta acessar o [**site**](https://siscamovel.azurewebsites.net).
+Para desenvolvedores, ver instruções de instalação [**back-end**](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e4-proj-dist-t1-time4-siscamovel/tree/dev/api) e [**front-end**](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e4-proj-dist-t1-time4-siscamovel/tree/dev/interface).
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+
 
 # Documentação
 
@@ -27,8 +29,6 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 <li><a href="docs/03-Metodologia.md"> Metodologia</a></li>
 <li><a href="docs/04-Projeto de Interface.md"> Projeto de Interface</a></li>
 <li><a href="docs/05-Arquitetura da Solução.md"> Arquitetura da Solução</a></li>
-<li><a href="docs/06-Template padrão do Site.md"> Template padrão do Site</a></li>
-<li><a href="docs/07-Programação de Funcionalidades.md"> Programação de Funcionalidades</a></li>
 <li><a href="docs/08-Plano de Testes de Software.md"> Plano de Testes de Software</a></li>
 <li><a href="docs/09-Registro de Testes de Software.md"> Registro de Testes de Software</a></li>
 <li><a href="docs/10-Plano de Testes de Usabilidade.md"> Plano de Testes de Usabilidade</a></li>
@@ -39,7 +39,7 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 
 # Código
 
-* <a href="https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e4-proj-back-t1-time-3-siscamovel/archive/refs/heads/main.zip"> Código Fonte</a>
+* <a href="https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e4-proj-dist-t1-time4-siscamovel/archive/refs/tags/SISCM-RC1.zip"> SISCAMOVEL Release Candidate 1</a>
 
 # Apresentação
 

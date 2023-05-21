@@ -33,7 +33,7 @@ Inclua um diagrama da solução e descreva os módulos e as tecnologias que faze
 
 A imagem a seguir ilustra a o fluxo do usuário em nossa solução. Assim
 que o usuário entra na plataforma, ele é apresentado à tela inicial
-(Tela 1) onde ele é confrontado com as opões de editar seu perfil ou
+(Tela 1) onde ele é confrontado com as opções de editar seu perfil ou
 então visualizar sua galeria.
 
 Caso ele opte por seguir pelo primeiro caminho (Editar Perfil), ele é
@@ -55,23 +55,21 @@ escolher salvar ou deletar o post. Em ambos os casos o status é
 notificado para o usuário (Tela 8) e em seguida ele é redirecionado
 para a Tela 2.
 
-![SISCAMOVEL User Flow](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2021-2-e1-proj-web-t1-grupo-4/raw/main/img/siscamovel-userflow.jpg)
+![SISCAMOVEL User Flow](https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2023-1-e4-proj-dist-t1-time4-siscamovel/raw/main/img/siscamovel-userflow.jpg)
 
 
 ## Tecnologias Utilizadas
 
-A nossa aplicação web será estruturada em HTML, CSS e JavaScript, onde buscamos atender as demandas de nosso público alvo.
+A nossa aplicação web será estruturada em ASP.NET Core API e Angular, onde buscamos atender as demandas de nosso público alvo.
 
 Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
 
 
 ## Hospedagem
 
-O produto será hospedado na plataforma Heroku.
+O produto será hospedado na plataforma em nuvem Azure.
 
 > **Links Úteis**:
 >
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+> - [GitHub Actions](https://docs.github.com/en/actions/)
+> - [Getting Started with Azure](https://azure.microsoft.com/en-us/get-started/)
